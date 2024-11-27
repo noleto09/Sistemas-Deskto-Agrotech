@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Agrotech.Usuarios_cadastrados.UsuariosCadastrados"
+             Title="UsuariosCadastrados">
+
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+
+                <!-- Definição das colunas da Grid -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Definição das linhas da Grid -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label 
+        Text="CPF:" 
+        FontSize="15" 
+        Margin="20,30,0,0" 
+        VerticalOptions="Center" 
+        HorizontalOptions="Start" 
+        Grid.Row="1"
+        Grid.Column="0" />
+                <Entry
+        x:Name="Cpfusuario"
+        IsEnabled="True"
+        Placeholder="CPF usuario"
+        HorizontalOptions="Start" 
+        Grid.Row="1"
+        Grid.Column="0"
+        WidthRequest="120" 
+        Margin="50,0,0,0"/>
+
+                <ImageButton 
+        Source="img_lupa.png" 
+        HeightRequest="20"
+        WidthRequest="20"
+        Scale="0.6" 
+        HorizontalOptions="Start"
+        BackgroundColor="Black"
+        Grid.Row="1"
+        Grid.RowSpan="3"
+        Grid.Column="0"
+        Margin="160,20,0,0"
+        Clicked="Button_Pesquisaporcpf"/>
+
+                <Label 
+        Text="Nome de Usuário:" 
+        FontSize="15" 
+        Margin="200,30,0,0" 
+        VerticalOptions="Center" 
+        HorizontalOptions="Start" 
+        Grid.Row="1"
+        Grid.Column="0" />
+                <Entry
+        x:Name="Nomedousario"
+        IsEnabled="True"
+        Placeholder="Nome de usuário"
+        HorizontalOptions="Start" 
+        Grid.Row="1"
+        Grid.Column="1"
+        WidthRequest="130" 
+        Margin="10,0,0,0"/>
+
+                <ImageButton 
+        Source="img_lupa.png" 
+        HeightRequest="20"
+        WidthRequest="20"
+        Scale="0.6" 
+        HorizontalOptions="Start"
+        BackgroundColor="Black"
+        Grid.Row="1"
+        Grid.RowSpan="3"
+        Grid.Column="1"
+        Margin="130,20,0,0"
+        Clicked="Button_PequisaPorNome"/>
+            </Grid>
+
+            <CollectionView x:Name="UsuariosCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Nome:" FontSize="14" FontAttributes="Bold" />
+                                <Label Text="{Binding Nome}" FontSize="14" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="CPF:" FontSize="14" FontAttributes="Bold" />
+                                <Label Text="{Binding Cpf}" FontSize="14" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Nome de Usuário:" FontSize="14" FontAttributes="Bold" />
+                                <Label Text="{Binding NomeUsuario}" FontSize="14" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

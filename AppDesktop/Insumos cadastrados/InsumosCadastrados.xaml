@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Agrotech.Insumos_cadastrados.InsumosCadastrados"
+             Title="Insumos Cadastrados">
+
+
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+
+                <!-- Definição das colunas da Grid -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Definição das linhas da Grid -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label 
+            Text="N°" 
+            FontSize="15" 
+            Margin="20,30,0,0" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="0" />
+                <Entry
+            x:Name="NumeroLoteEntry"
+            IsEnabled="True"
+            Placeholder="Número do Lote"
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="0"
+            WidthRequest="120" 
+            Margin="50,0,0,0"/>
+
+                <ImageButton 
+            Source="img_lupa.png" 
+            HeightRequest="20"
+            WidthRequest="20"
+            Scale="0.6" 
+            HorizontalOptions="Start"
+            BackgroundColor="Black"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Grid.Column="0"
+            Margin="160,20,0,0"
+            Clicked="Button_Numero_Lote_insumo"/>
+
+                <Label 
+            Text="Data Inicial:" 
+            FontSize="15" 
+            Margin="200,30,0,0" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="0" />
+                <Entry
+            x:Name="DataInicialLote"
+            IsEnabled="True"
+            Placeholder="Data Inicial"
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="1"
+            WidthRequest="130" 
+            Margin="10,0,0,0"/>
+
+
+                <Label 
+            Text="Data Final:" 
+            FontSize="15" 
+            Margin="150,30,0,0" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="1" />
+                <Entry
+            x:Name="DataFinalLote"
+            IsEnabled="True"
+            Placeholder="Data Final"
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="2"
+            WidthRequest="130" 
+            Margin="5,0,0,0"/>
+
+                <ImageButton 
+            Source="img_lupa.png" 
+            HeightRequest="20"
+            WidthRequest="20"
+            Scale="0.6" 
+            HorizontalOptions="Start"
+            BackgroundColor="Black"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Grid.Column="2"
+            Margin="120,20,0,0"
+           Clicked="Button_Datainicial_final_insumo"/>
+
+                <Label 
+            Text="Insumo:" 
+            FontSize="15" 
+            Margin="160,30,0,0" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="2" />
+                <Entry
+            x:Name="PesquisaInsumo"
+            IsEnabled="True"
+            Placeholder="Produto"
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="2"
+            WidthRequest="130" 
+            Margin="220,0,0,0"/>
+
+                <ImageButton 
+            Source="img_lupa.png" 
+            HeightRequest="20"
+            WidthRequest="20"
+            Scale="0.6" 
+            HorizontalOptions="Start"
+            BackgroundColor="Black"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Grid.Column="2"
+            Margin="330,20,0,0"
+            Clicked="Button_Insumo"/>
+
+                <Label 
+            Text="Vencimento:" 
+            FontSize="15" 
+            Margin="370,30,0,0" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="2" />
+                <Entry
+            x:Name="Vencimento"
+            IsEnabled="True"
+            Placeholder="Vencimento"
+            HorizontalOptions="Start" 
+            Grid.Row="1"
+            Grid.Column="3"
+            WidthRequest="130" 
+            Margin="10,0,0,0"/>
+
+                <ImageButton 
+            Source="img_lupa.png" 
+            HeightRequest="20"
+            WidthRequest="20"
+            Scale="0.6" 
+            HorizontalOptions="Start"
+            BackgroundColor="Black"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Grid.Column="3"
+            Margin="130,20,0,0"
+            Clicked="Button_Datadevencimento_insumo"/>
+            </Grid>
+
+
+            <CollectionView x:Name="LotesCollectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Nome do Produto:" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{Binding NomeProduto}" FontSize="14" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Quantidade:" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{Binding Quantidade}" FontSize="14" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Data de Cadastro:" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{Binding DataCadastro}" FontSize="14" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Data de Vencimento:" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{Binding DataVencimento}" FontSize="14" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Intercorrência:" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{Binding IntercorrenciaLote}" FontSize="14" />
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+        </ScrollView>
+
+
+    </ContentPage>
+
+
+
+
+

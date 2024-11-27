@@ -1,0 +1,2391 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Agrotech.Paginas">
+    <ContentPage.Content>
+        
+        
+        <AbsoluteLayout>
+
+            <!-- Menu lateral -->
+            <StackLayout 
+                x:Name="MenuLateral" 
+                BackgroundColor="#90ee90" 
+                VerticalOptions="FillAndExpand" 
+                WidthRequest="260" 
+                IsVisible="True"
+                AbsoluteLayout.LayoutBounds="0, 0, 250, 1"
+                AbsoluteLayout.LayoutFlags="PositionProportional, HeightProportional">
+
+                <!-- Botões do menu lateral -->
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Image 
+                        Source="img_home.png" 
+                        BackgroundColor="Transparent"
+                        HeightRequest="35"
+                        WidthRequest="35"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start" />
+                </StackLayout>
+                
+               
+
+                <StackLayout Orientation="Horizontal" Padding="6">
+                    <ImageButton 
+                        x:Name="bntconfiguracao"
+                        IsEnabled="True"
+                        Source="img_configuracao.png" 
+                        HeightRequest="60"
+                        WidthRequest="60"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="Botao_Configuracao"/>
+                    <Button 
+                        x:Name="bntconfiguracao2"
+                        IsEnabled="True"
+                        Text="Configuração"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        TextColor="Black"
+                        VerticalOptions="Center" 
+                        Clicked="Botao_Configuracao"
+                        BackgroundColor="Transparent"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <ImageButton 
+                        x:Name="bntcadastrar_cliente"
+                        IsEnabled="True"
+                        Source="img_cadastrar_cliente.png" 
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="Botao_cadastro_clicavel" />
+                    <Button 
+                        x:Name="bntcadastrar_cliente_2"
+                        IsEnabled="True"
+                        Text="Cadastrar cliente"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        TextColor="Black"
+                        VerticalOptions="Center" 
+                        Clicked="Botao_cadastro_clicavel"
+                        BackgroundColor="Transparent"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <ImageButton 
+                        x:Name="bntvendas"
+                        IsEnabled="True"
+                        Source="img_vendas.png" 
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="Botao_Vendas_clicavel"/>
+                    <Button 
+                        x:Name="bntvendas2"
+                        IsEnabled="True"
+                        Text="Vendas"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        TextColor="Black"
+                        VerticalOptions="Center" 
+                        Clicked="Botao_Vendas_clicavel"
+                        BackgroundColor="Transparent"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <ImageButton 
+                        x:Name="bntprodutos"
+                        IsEnabled="True"
+                        Source="isumos_sem_fundo.png" 
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="Botao_CadastarPI_clicavel"/>
+                    <Button 
+                         x:Name="bntprodutos2"
+                        IsEnabled="True"
+                        Text="Cadastro de Produto"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        TextColor="Black"
+                        VerticalOptions="Center" 
+                        Clicked="Botao_CadastarPI_clicavel"
+                        BackgroundColor="Transparent"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <ImageButton 
+                        x:Name="bntinsumos"
+                        IsEnabled="True"
+                        Source="isumos_sem_fundo.png" 
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        Margin="0,0,0,0"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="Botao_Relatorio_Clicavel"/>
+                    <Button 
+                        x:Name="bntinsumos2"
+                        IsEnabled="True"
+                        Text="Cadastro de Insumos"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        TextColor="Black"
+                        VerticalOptions="Center" 
+                        Clicked="Botao_Relatorio_Clicavel"
+                        BackgroundColor="Transparent"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <ImageButton 
+                        x:Name="bntmovimentacoes"
+                        IsEnabled="True"
+                        Source="movimentacoes.png" 
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        Margin="0,0,0,0"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="Button_Movimentacoes"/>
+                    <Button 
+                        x:Name="bntmovimentacoes2"
+                        IsEnabled="True"
+                        Text="Movimentações"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        TextColor="Black"
+                        VerticalOptions="Center" 
+                        Clicked="Button_Movimentacoes"
+                        BackgroundColor="Transparent"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <!-- Conteúdo principal -->
+            <StackLayout 
+                x:Name="MainContent"
+                BackgroundColor="#98fb98" 
+                VerticalOptions="FillAndExpand"
+                AbsoluteLayout.LayoutBounds="250, 0, 1, 1"
+                AbsoluteLayout.LayoutFlags="HeightProportional, WidthProportional">
+            </StackLayout>
+
+            
+            <!-- Botão Home sempre visível no canto -->
+            <Image 
+                Source="img_home.png" 
+                BackgroundColor="Transparent"
+                HeightRequest="35"
+                WidthRequest="30"
+                Aspect="AspectFit"
+                AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                AbsoluteLayout.LayoutFlags="None" />
+
+            <!--Página de configurações-->
+            <ContentView
+                x:Name="configuracaoPage"
+                BackgroundColor="#F8F8FF"
+                Margin="25,0,0,0"
+                IsVisible="False"
+                AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="None">
+
+                <ScrollView>
+                    <StackLayout>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <!-- Espaço flexível para a label -->
+                                <ColumnDefinition Width="Auto" />
+                                <!-- Espaço ajustado para o botão -->
+                            </Grid.ColumnDefinitions>
+
+                            <Label 
+                               Text="Configurações" 
+                                FontSize="20" 
+                                FontAttributes="Bold" 
+                                TextColor="Black" 
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Start" 
+                                Grid.Row="0" 
+                                Grid.Column="0"/>
+
+                            <ImageButton 
+                                Source="imgx.jpg" 
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                Scale="0.6" 
+                                VerticalOptions="Center"
+                                HorizontalOptions="End" 
+                                BackgroundColor="Transparent"
+                                Clicked="Button_x"
+                                Grid.Row="0"
+                                Grid.Column="1"/>
+                            <!-- Botão no final da coluna direita -->
+
+                        </Grid>
+
+
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                               
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+
+                            <Button
+                            Clicked="Button_Cadastrar_Usuario"
+                            Text="Cadastrar Funcionários"
+                            Margin="50,20,0,0"
+                            FontSize="Body"
+                            TextColor="Black"
+                            WidthRequest="190"
+                            BackgroundColor="LightGrey"
+                            Grid.Row="0"/>
+
+                        <Button
+                            Clicked="Button_ManualdeAjuda"
+                            Text="Manual de Ajuda"
+                            Margin="50,10,0,0"
+                            FontSize="Body"
+                            TextColor="Black"
+                            WidthRequest="190"
+                            BackgroundColor="LightGrey"
+                            Grid.Row="1"/>
+
+                        <Button
+                            Text="Atualização"
+                            Margin="50,10,0,0"
+                            FontSize="Body"
+                            TextColor="Black"
+                            WidthRequest="190"
+                            BackgroundColor="LightGrey"
+                            Grid.Row="2"/>
+
+                        <Button
+                            Clicked="Button_Suporte"
+                            Text="Suporte e Ajuda"
+                            Margin="50,10,0,0"
+                            FontSize="Body"
+                            TextColor="Black"
+                            WidthRequest="190"
+                            BackgroundColor="LightGrey"
+                            Grid.Row="3"/>
+
+                        </Grid>
+
+                        
+
+                    </StackLayout>
+                    
+                </ScrollView>
+                
+                <!-- Página cadastro de usuário-->
+            </ContentView>
+
+            <ContentView x:Name="Pagina_Cadastrar_Usuario" BackgroundColor="White" Margin="25,0,0,0"
+                IsVisible="False" AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="None">
+
+                <StackLayout>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+
+                            <ColumnDefinition Width="500"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        
+                        <Label 
+                            Text="Cadastro de usuário" 
+                            FontSize="20" 
+                            FontAttributes="Bold" 
+                            TextColor="Black" 
+                            Margin="0,0,0,0"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"/>
+
+                        <ImageButton 
+                            Source="imgx.jpg" 
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Scale="0.6" 
+                            VerticalOptions="Start"
+                            HorizontalOptions="End" 
+                            BackgroundColor="Transparent"
+                            Clicked="Button_x"
+                            Grid.Row="0"
+                            Grid.Column="6"
+                            Grid.ColumnSpan="6"
+                            Margin="0,0,0,50"/>
+                        
+                            
+                        <Label 
+                            Text="Nome:" 
+                            TextColor="Black"
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start" 
+                            WidthRequest="150" 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Margin="10,70,0,0"/>
+                        
+                       
+                        <Entry
+                            IsEnabled="False"
+                            x:Name="nomeEntry"
+                            Placeholder="NOME"
+                            TextColor="Black"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="200" 
+                            HeightRequest="20"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Margin="70,45,0,0"/>
+
+                          
+
+                        <Button
+                            Text="CONSULTAR"
+                            FontSize="19"
+                            BackgroundColor="Black"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="0"
+                            Margin="250,70,0,0"
+                            Padding="45,10,0,15" />
+
+                        <Button
+                            Text="ALTERAR"
+                            FontSize="19"
+                            BackgroundColor="LightGrey"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="1"
+                            Margin="250,0,0,0"
+                            Padding="0,10,0,10" />
+
+                        <Button
+                            Text="NOVO"
+                            FontSize="19"
+                            BackgroundColor="#00BFFF"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="1"
+                            Grid.RowSpan="4"
+                            Margin="250,0,0,10"
+                            Padding="0,10,0,10" 
+                            Clicked="Button_Novousuario"/>
+
+                        <Button
+                            Text="SALVAR"
+                            FontSize="19"
+                            BackgroundColor="#32CD32"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="2"
+                            Grid.RowSpan="4"
+                            Margin="250,20,0,10"
+                            Padding="0,10,0,10"
+                            Clicked="Button_Salvar_Clicked" />
+
+                        <Image 
+                            Source="img_lupa.png" 
+                            HeightRequest="50"
+                            WidthRequest="40"
+                            Aspect="AspectFit"
+                            Grid.Column="6"
+                            Margin="50,70,110,0"
+                            AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                            AbsoluteLayout.LayoutFlags="None"/>
+
+                        <Image 
+                            Source="user_img_semfundo.png" 
+                            HeightRequest="50"
+                            WidthRequest="30"
+                            Aspect="AspectFit"
+                            Grid.Column="5"
+                            Grid.Row="1"
+                            Grid.RowSpan="4"
+                            Margin="130,0,0,10"
+                            AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                            AbsoluteLayout.LayoutFlags="None"/>
+
+                        <Image 
+                            Source="img_salvar_semfundo.png" 
+                            HeightRequest="50"
+                            WidthRequest="30"
+                            Aspect="AspectFit"
+                            Grid.Column="6"
+                            Grid.Row="2"
+                            Grid.RowSpan="4"
+                            Margin="0,50,70,40"
+                            AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                            AbsoluteLayout.LayoutFlags="None"/>
+
+                        <Label 
+                            Text="CPF:" 
+                            TextColor="Black"
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start" 
+                            WidthRequest="150" 
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Margin="10,40,0,0"/>
+
+                        <Entry
+                            IsEnabled="False"
+                            x:Name="cpfEntry"
+                            TextColor="Black"
+                            Placeholder="CPF"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="200" 
+                            HeightRequest="20"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Margin="70,45,0,0"/>
+
+                        <Label 
+                            Text="NOME DE USUÁRIO:"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start" 
+                            WidthRequest="150" 
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Margin="100,50,0,0"/>
+                        <Entry
+                            IsEnabled="False"
+                            x:Name="nomeUsuarioEntry"
+                            TextColor="Black"
+                            Placeholder="NOME DE USUÁRIO"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="200" 
+                            HeightRequest="20"
+                            Grid.Column="0"
+                            Grid.Row="4"
+                            Margin="70,10,0,0"/>
+
+                        <Label 
+                            Text="SENHA:" 
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start" 
+                            WidthRequest="150" 
+                            Grid.Column="3"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="3"
+                            Margin="120,40,0,0"/>
+                        <Entry
+                            IsEnabled="False"
+                            x:Name="senhaEntry"
+                            TextColor="Black"
+                            Placeholder="SENHA"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="200" 
+                            HeightRequest="20"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="4"
+                            Margin="50,10,0,0"/>
+
+
+                    </Grid>
+                    
+                </StackLayout>
+            </ContentView>
+
+            <ContentView x:Name="Pagina_Cadastrar_Cliente" BackgroundColor="White" Margin="25,0,0,0"
+                IsVisible="False" AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="None">
+                <StackLayout>
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label 
+                            Text="Cadastrar Cliente" 
+                            FontSize="20" 
+                            FontAttributes="Bold" 
+                            TextColor="Black" 
+                            Margin="5,0,0,0"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start" 
+                            Grid.Row="0" 
+                            Grid.Column="0"
+                            Grid.ColumnSpan="6" />
+
+                        <ImageButton 
+                            Source="imgx.jpg" 
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Scale="0.6" 
+                            VerticalOptions="Start"
+                            HorizontalOptions="End" 
+                            BackgroundColor="Transparent"
+                            Clicked="Button_x"
+                            Grid.Row="0"
+                            Grid.Column="8"
+                            Margin="400,0,0,50"/>
+
+                        <Label 
+                            Text="ID:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start" 
+                            WidthRequest="150" 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Margin="10,0,0,0"/>
+                        <Entry
+                            x:Name="idEntry"
+                            IsEnabled="False"
+                            Placeholder="ID"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Grid.RowSpan="1"
+                            Margin="40,0,0,0"/>
+
+                       
+
+                        <Label 
+                            Text="Nome:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start" 
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Grid.RowSpan="2"
+                            Margin="10,0,0,15"/>
+                        <Entry
+                            x:Name="Cl_nome_Entry"
+                            IsEnabled="False"
+                            Placeholder="NOME"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="250" 
+                            HeightRequest="0"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Grid.RowSpan="0"
+                            Margin="90,0,0,40"/>
+
+                        <Button
+                            Text="CONSULTAR"
+                            FontSize="19"
+                            BackgroundColor="Black"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="0"
+                            Grid.RowSpan="4"
+                            Margin="0,0,0,10"
+                            Padding="45,10,0,15" />
+
+                        <Image 
+                            Source="img_lupa.png" 
+                            HeightRequest="50"
+                            WidthRequest="40"
+                            Aspect="AspectFit"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Grid.RowSpan="4"
+                            Margin="0,0,15,10"
+                            AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                            AbsoluteLayout.LayoutFlags="None"/>
+
+
+                        <Button
+                            Text="NOVO"
+                            FontSize="19"
+                            BackgroundColor="#00BFFF"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="0"
+                            Grid.RowSpan="4"
+                            Margin="0,100,0,0"
+                            Padding="0,10,0,10" 
+                            Clicked="Button_Novo_Cliente"/>
+
+                        <Image 
+                            Source="user_img_semfundo.png" 
+                            HeightRequest="50"
+                            WidthRequest="35"
+                            Aspect="AspectFit"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="0"
+                            Grid.Row="0"
+                            Grid.RowSpan="0"
+                            Margin="0,95,120,0"
+                            AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                            AbsoluteLayout.LayoutFlags="None"/>
+
+
+                        <Button
+                            Text="ALTERAR"
+                            FontSize="19"
+                            BackgroundColor="#1E90FF"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="3"
+                            Margin="0,0,0,25"
+                            Padding="0,10,0,10"/>
+
+                        <Label 
+                            Text="CPF/CNPJ:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Grid.RowSpan="3"
+                            Margin="10,25,0,0"/>
+                        <Entry
+                            x:Name="CpfCnpjEntry"
+                             IsEnabled="False"
+                            TextChanged="CpfCnpjEntry_TextChanged"
+                            Placeholder="CPF/CPNJ"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="200" 
+                            HeightRequest="0"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Grid.RowSpan="5"
+                            Margin="90,90,0,0"/>
+                        
+                        <Label 
+                            Text="RG:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Grid.RowSpan="4"
+                            Margin="10,80,0,0"/>
+                        <Entry
+                            x:Name="Cl_Rg_Entry"
+                             IsEnabled="False"
+                            Placeholder="RG"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0"
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Margin="90,20,0,0"/>
+
+                        <Label 
+                            Text="Data de &#10;Nascimento:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="0"
+                            Grid.Row="4"
+                            Margin="10,6,0,0"/>
+                        <Entry
+                            x:Name="Cl_dn_Entry"
+                             IsEnabled="False"
+                            Placeholder="DATA DE NASCIMENTO"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="170" 
+                            HeightRequest="0"
+                            Grid.Column="0"
+                            Grid.Row="4"
+                            Margin="110,0,0,0"
+                            TextChanged="Cl_dn_Entry_TextChanged"/>
+
+                        <Label 
+                            Text="Rua:" 
+                            FontSize="15"   
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="0"
+                            Grid.Row="5"
+                            Margin="10,65,0,0"/>
+                        <Entry
+                            x:Name="RuaEntry"
+                            Placeholder="RUA"
+                            IsEnabled="False"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0"
+                            Grid.Column="0"
+                            Grid.Row="5"
+                            Margin="90,40,0,0"/>
+
+                        <Label 
+                            Text="N°:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="1"
+                            Grid.ColumnSpan="0"
+                            Grid.Row="5"
+                            Margin="10,65,0,0"/>
+                        <Entry
+                            x:Name="NumeroEntry"
+                            Placeholder="N°"
+                            IsEnabled="False"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="5"
+                            Margin="45,40,0,0"/>
+
+                        <Label 
+                            Text="Complementar:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="0"
+                            Grid.Row="6"
+                            Margin="10,0,0,10"/>
+                        <Entry
+                            x:Name="ComplementarEntry"
+                            Placeholder="COMPLEMENTAR"
+                             IsEnabled="False"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="200" 
+                            HeightRequest="0"
+                            Grid.Column="0"
+                            Grid.Row="6"
+                            Margin="130,0,0,35"/>
+
+                        <Label 
+                            Text="CEP:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="1"
+                            Grid.Row="6"
+                            Margin="10,0,0,10"/>
+                        <Entry
+                            x:Name="CepEntry"
+                            Placeholder="CEP"
+                             IsEnabled="False"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="6"
+                            Margin="50,05,0,45"/>
+
+                        <Label 
+                            Text="Bairro:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="0"
+                            Grid.Row="6"
+                            Grid.RowSpan="7"
+                            Margin="10,0,0,0"/>
+                        <Entry
+                            x:Name="BairroEntry"
+                            Placeholder="BAIRRO" 
+                             IsEnabled="False"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0"
+                            Grid.Column="0"
+                            Grid.Row="6"
+                            Grid.RowSpan="7"
+                            Margin="90,0,0,5"/>
+
+                        <Label 
+                            Text="Estado:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="0"
+                            Grid.Row="6"  
+                            Grid.RowSpan="7"
+                            Margin="280,0,0,0"/>
+                        <Entry
+                            x:Name="EstadoEntry"
+                            Placeholder="ESTADO"
+                             IsEnabled="False"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0"   
+                            Grid.Column="1"
+                            Grid.ColumnSpan="0"
+                            Grid.Row="6"
+                            Grid.RowSpan="7"
+                            Margin="0,0,0,5"/>
+
+
+                        <Label 
+                            Text="Cidade:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Grid.Column="2"
+                            Grid.ColumnSpan="0"
+                            Grid.Row="6" 
+                            Grid.RowSpan="7"
+                            Margin="30,0,0,0"/>
+                        <Entry
+                            x:Name="CidadeEntry"
+                            Placeholder="CIDADE" 
+                             IsEnabled="False"
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0"   
+                            Grid.Column="2"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="6"
+                            Grid.RowSpan="7"
+                            Margin="90,0,0,5"/>
+
+                       
+
+                        <Button
+                            Text="SALVAR"
+                            Clicked="Button_Salvar_Cliente"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#32CD32"
+                            WidthRequest="160"
+                            HeightRequest="50"
+                            Grid.Column="6"
+                            Grid.Row="7"
+                            Grid.RowSpan="7"
+                            Margin="0,30,0,0"
+                            Padding="10,10,0,10" />
+
+                        <Image 
+                            Source="img_salvar_semfundo.png" 
+                            HeightRequest="50"
+                            WidthRequest="35"
+                            Aspect="AspectFit"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="7"
+                            Grid.RowSpan="7"
+                            Margin="0,30,10,0"
+                            AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                            AbsoluteLayout.LayoutFlags="None"/>
+
+
+                        <RadioButton 
+                            x:Name="RadioButtonPF"
+                             IsEnabled="False"
+                            Value="PF" 
+                            Margin="20,90,0,0"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Grid.RowSpan="0"
+                            GroupName="ClientType"
+                            CheckedChanged="OnClientTypeChanged">
+                            <RadioButton.Content>
+                                <StackLayout>
+                                    <Label Text="PF"/>
+                                </StackLayout>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                        <RadioButton 
+                            x:Name="RadioButtonPJ" 
+                             IsEnabled="False"
+                            Value="PJ" 
+                            Margin="100,90,0,0"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            GroupName="ClientType"
+                            CheckedChanged="OnClientTypeChanged">
+                            <RadioButton.Content>
+                                <StackLayout>
+                                    <Label Text="PJ"/>
+                                </StackLayout>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                        <!-- RadioButtons for Sexo -->
+                       
+                            <CheckBox 
+                                    x:Name="CheckBoxMale" 
+                                    IsEnabled="False" 
+                                    CheckedChanged="CheckBox_CheckedChanged"
+                                    Margin="160,0,0,40"
+                                    Grid.Column="0"
+                                    Grid.Row="5"/>
+                            <Label 
+                                    Text="MASCULINO" 
+                                    VerticalOptions="Center"
+                                    Margin="200,0,0,40"
+                                    Grid.Column="0"
+                                    Grid.Row="5"/>
+                      
+                       
+                            <CheckBox 
+                                    x:Name="CheckBoxFemale" 
+                                    IsEnabled="False" 
+                                    CheckedChanged="CheckBox_CheckedChanged"
+                                    Margin="0,0,0,40"
+                                    Grid.Column="1"
+                                    Grid.Row="5"/>
+                            <Label 
+                                    Text="FEMININO" 
+                                    VerticalOptions="Center"
+                                    Margin="40,0,0,40"
+                                    Grid.Column="1"
+                                    Grid.Row="5"/>
+                       
+
+                      
+                            <CheckBox 
+                                    x:Name="CheckBoxOtherSex" 
+                                    IsEnabled="False" 
+                                    CheckedChanged="CheckBox_CheckedChanged"
+                                    Margin="0,0,0,40"
+                                    Grid.Column="2"
+                                    Grid.Row="5"/>
+                            <Label 
+                                Text="OUTROS" 
+                                VerticalOptions="Center"
+                                Margin="40,0,0,40"
+                                Grid.Column="2"
+                                Grid.Row="5"/>
+                       
+
+                        <!-- RadioButton and Entry for Address Number -->
+                        <RadioButton 
+                                x:Name="RadioButtonSN" 
+                             IsEnabled="False"
+                                Value="OT" 
+                                Margin="0,40,0,0"
+                                Grid.Column="2"
+                                Grid.Row="3"
+                            Grid.RowSpan="5"
+                                CheckedChanged="OnAddressTypeChanged">
+                            <RadioButton.Content>
+                                <StackLayout>
+                                    <Label Text="S/N"/>
+                                </StackLayout>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                        
+
+                    </Grid>
+
+                </StackLayout>
+                
+            </ContentView>
+
+
+            <ContentView
+                x:Name="Insumos_Produtos"
+                BackgroundColor="#F8F8FF"
+                Margin="25,0,0,0"
+                IsVisible="False"
+                AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="None">
+                <StackLayout>
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="AUTO"/>
+                        </Grid.RowDefinitions>
+
+                        <Label
+                        Text="Cadastro de Produtos"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        Margin="10,0,0,0"/>
+
+                        <ImageButton 
+                            Source="imgx.jpg" 
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Scale="0.6" 
+                            VerticalOptions="Start"
+                            HorizontalOptions="End" 
+                            BackgroundColor="Transparent"
+                            Clicked="Button_x"
+                            Grid.Row="0"
+                            Grid.Column="8"
+                            Margin="380,0,0,0"/>
+
+                        <Label 
+                            Text="N.C:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Margin="10,70,0,0"/>
+                        <Entry
+                            x:Name="Nm_Cadastro_Produto_Insumo"
+                            IsEnabled="False"
+                            Placeholder="ID"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0"   
+                            Grid.Row="0"
+                            Margin="40,40,0,0"/>
+
+                        <Label 
+                            Text="Produto:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="0"
+                            Margin="170,70,0,0"/>
+                        <Entry
+                            x:Name="CadastroprodutoEntry"
+                            IsEnabled="False"
+                            Placeholder="Nome do Produto"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0" 
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="0"
+                            Margin="240,40,0,0"/>
+
+                        <Label 
+                            Text="Unidade:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="2"
+                            Margin="40,70,0,0"/>
+                        <Entry
+                            x:Name="CadastroUnidadeEntry"
+                            IsEnabled="False"
+                            Placeholder="UN"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0" 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Margin="110,40,0,0"/>
+
+
+                        <Label 
+                            Text="Quantidade:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Margin="10,30,0,0"/>
+                        <Entry
+                            x:Name="Quantidade_Entry_PI"
+                            IsEnabled="False"
+                            Placeholder="QT"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0" 
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Margin="100,0,0,0"/>
+
+                        <Label 
+                            Text="Data de Cadastro:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Margin="10,30,0,0"/>
+                        <Entry
+                            x:Name="DatadecadastroEntry"
+                            IsEnabled="False"
+                            Placeholder="Data de Cadastro"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0" 
+                            Grid.Column="1"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="2"
+                            Margin="140,0,0,0"/>
+
+                        <Label 
+                            Text="Valor:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Margin="10,50,0,0"/>
+                        <Entry
+                            x:Name="ValorEntry"
+                            IsEnabled="False"
+                            Placeholder="Valor"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0" 
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Margin="60,20,0,0"
+                            TextChanged="ValorProduto_TextChanged"/>
+
+                        <Label 
+                            Text="Data de Vencimento:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="3"
+                            Margin="0,50,0,0"/>
+                        <Entry
+                            x:Name="DatadevencimentoEntry"
+                            IsEnabled="False"
+                            Placeholder="DATA DE VENCIMENTO"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="170" 
+                            HeightRequest="0" 
+                            Grid.Column="2"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="3"
+                            Margin="15,20,0,0"/>
+
+                        <Label 
+                            Text="Intercorrência:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="0"
+                            Grid.Row="4"
+                            Margin="10,50,0,0"/>
+                        <Editor
+                            x:Name="IntercorrenciaEditor"
+                            IsEnabled="False"
+                            Placeholder="INTECORRÊNCIA"
+                            HorizontalOptions="StartAndExpand"
+                            WidthRequest="300"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="4"
+                            Margin="120,20,0,0"
+                            AutoSize="TextChanges"/>
+
+                        <Button
+                            Text="CONSULTAR"
+                            Clicked="Button_Consultar_Produto"
+                            FontSize="19"
+                            BackgroundColor="Black"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="4"     
+                            Margin="150,0,30,10"
+                            Padding="40,10,0,10" />
+
+                        <Image 
+                            Source="img_lupa.png" 
+                            HeightRequest="50"
+                            WidthRequest="40"
+                            Aspect="AspectFit"
+                            Grid.Column="2"
+                            Grid.Row="4"
+                            Margin="0,0,30,10"
+                            AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                            AbsoluteLayout.LayoutFlags="None"/>
+
+                        <Button
+                            Clicked="Button_Novo_Produto"
+                            Text="Novo Produto"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#DAA520"
+                            WidthRequest="150"
+                            HeightRequest="45"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="5"
+                            Margin="70,0,0,0"
+                            Padding="0,10,0,10"/>
+
+                        <Button
+                            Clicked="Button_Novo_Lote_Produto"
+                            Text="Novo Lote"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#DAA520"
+                            WidthRequest="150"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="5"                        
+                            Margin="50,0,0,0"
+                            Padding="0,10,0,10"/>
+
+                        <Button
+                            Clicked="Button_Salvar_Produtos"
+                            Text="Salvar Produto"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#32CD32"
+                            WidthRequest="150"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="6"
+                            Margin="70,10,0,0"
+                            Padding="0,10,0,10"/>
+                        <Button
+                            Clicked="Button_Salvar_Lote"
+                            Text="SALVAR LOTE"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#df0000"
+                            WidthRequest="150"
+                            HeightRequest="47"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="6"
+                            Margin="50,10,0,0"
+                            Padding="0,10,0,10"/>
+
+                    </Grid>
+
+                </StackLayout>
+                
+                
+            </ContentView>
+
+
+            <ContentView
+                    x:Name="Cadastro_Isumo"
+                    BackgroundColor="#F8F8FF"
+                    Margin="25,0,0,0"
+                    IsVisible="False"
+                    AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize"
+                    AbsoluteLayout.LayoutFlags="None">
+                <StackLayout>
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Text="Cadastro Isumos"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            Margin="10,0,0,0"/>
+
+                        <ImageButton 
+                            Source="imgx.jpg" 
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            Scale="0.6" 
+                            VerticalOptions="Start"
+                            HorizontalOptions="End" 
+                            BackgroundColor="Transparent"
+                            Clicked="Button_x"
+                            Grid.Row="0"
+                            Grid.Column="8"
+                            Margin="380,0,0,0"/>
+
+                        <Label 
+                            Text="N.C :" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"  
+                            Margin="10,70,0,0"/>
+                        <Entry
+                            x:Name="Nm_Cadastro_Insumo"
+                            IsEnabled="False"
+                            Placeholder="ID"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0"   
+                            Grid.Row="0"
+                            Margin="40,40,0,0"/>
+
+                        <Label 
+                            Text="Insumo:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="0"
+                            Margin="170,70,0,0"/>
+                        <Entry
+                            x:Name="CadastroInsumoEntry"
+                            IsEnabled="False"
+                            Placeholder="Nome do Insumo"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0" 
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="0"
+                            Margin="240,40,0,0"/>
+
+                        <Label 
+                            Text="Unidade:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="2"
+                            Margin="40,70,0,0"/>
+                        <Entry
+                            x:Name="Cadastro_Unidade_Insumo_Entry"
+                            IsEnabled="False"
+                            Placeholder="UN"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0" 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Margin="110,40,0,0"/>
+
+                        <Label 
+                            Text="Quantidade:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Margin="10,30,0,0"/>
+                        <Entry
+                            x:Name="Quantidade_Insumo_Entry"
+                            IsEnabled="False"
+                            Placeholder="QT"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0" 
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Margin="100,0,0,0"/>
+
+                        <Label 
+                            Text="Data de Cadastro:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Margin="10,30,0,0"/>
+                        <Entry
+                            x:Name="Datadecadastro_Insumo_Entry"
+                            IsEnabled="False"
+                            Placeholder="Data de Cadastro"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="150" 
+                            HeightRequest="0" 
+                            Grid.Column="1"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="2"
+                            Margin="140,0,0,0"/>
+
+                        <Label 
+                            Text="Valor:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Margin="10,50,0,0"/>
+                        <Entry
+                            x:Name="Valor_Insumo_Entry"
+                            IsEnabled="False"
+                            Placeholder="Valor"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="100" 
+                            HeightRequest="0" 
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Margin="60,20,0,0"
+                             TextChanged="Valorinsumo_TextChanged"/>
+
+                        <Label 
+                            Text="Data de Vencimento:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="3"
+                            Margin="0,50,0,0"/>
+                        <Entry
+                            x:Name="Datadevencimento_Insumo_Entry"
+                            IsEnabled="False"
+                            Placeholder="DATA DE VENCIMENTO"    
+                            HorizontalOptions="StartAndExpand" 
+                            WidthRequest="170" 
+                            HeightRequest="0" 
+                            Grid.Column="2"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="3"
+                            Margin="15,20,0,0"/>
+
+                        <Label 
+                            Text="Intercorrência:" 
+                            FontSize="15" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Start"
+                            Grid.Column="0"
+                            Grid.Row="4"
+                            Margin="10,50,0,0"/>
+                        <Editor
+                            x:Name="Intercorrencia_Insumo_Editor"
+                            IsEnabled="False"
+                            Placeholder="INTECORRÊNCIA"
+                            HorizontalOptions="StartAndExpand"
+                            WidthRequest="300"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="8"
+                            Grid.Row="4"
+                            Margin="120,20,0,0"
+                            AutoSize="TextChanges"/>
+
+
+                        <Button
+                            Text="CONSULTAR"
+                            Clicked="Button_Consultar_Insumo"
+                            FontSize="19"
+                            BackgroundColor="Black"
+                            WidthRequest="160"
+                            HeightRequest="0"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="4"     
+                            Margin="150,0,30,10"
+                            Padding="40,10,0,10" />
+
+                        <Image 
+                            Source="img_lupa.png" 
+                            HeightRequest="50"
+                            WidthRequest="40"
+                            Aspect="AspectFit"
+                            Grid.Column="2"
+                            Grid.Row="4"
+                            Margin="0,0,30,10"
+                            AbsoluteLayout.LayoutBounds="10, 10, 35, 35"
+                            AbsoluteLayout.LayoutFlags="None"/>
+
+                        <Button
+                            Clicked="Button_Novo_Insumo"
+                            Text="Novo Produto"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#DAA520"
+                            WidthRequest="150"
+                            HeightRequest="45"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="4"
+                            Grid.Row="5"
+                            Margin="70,0,0,0"
+                            Padding="0,10,0,10"/>
+
+                        <Button
+                            Clicked="Button_Novo_Lote_Insumo"
+                            Text="Novo Lote"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#DAA520"
+                            WidthRequest="150"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="5"                        
+                            Margin="50,0,0,0"
+                            Padding="0,10,0,10"/>
+
+                        <Button
+                            Clicked="Button_Salvar_Insumos"
+                            Text="Salvar Insumo"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#32CD32"
+                            WidthRequest="150"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="6"
+                            Margin="70,10,0,0"
+                            Padding="0,10,0,10"/>
+                        <Button
+                           Clicked="Button_Salvar_Lote_Insumos"
+                            Text="SALVAR LOTE"
+                            VerticalOptions="Fill"
+                            HorizontalOptions="Start"
+                            FontSize="19"
+                            BackgroundColor="#df0000"
+                            WidthRequest="150"
+                            HeightRequest="47"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="5"
+                            Grid.Row="6"
+                            Margin="50,10,0,0"
+                            Padding="0,10,0,10"/>
+
+                    </Grid>
+
+                </StackLayout>
+
+
+            </ContentView>
+
+
+            <!-- Página de Vendas -->
+            <ContentView 
+                x:Name="VendasPage"
+                BackgroundColor="#F8F8FF"
+                Margin="25,0,0,0"
+                IsVisible="False"
+                AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="None">
+
+                
+                <!-- Conteúdo da página de vendas -->
+
+                <ScrollView>
+                    <StackLayout>
+
+                        <Grid>
+                            <!-- Definição das colunas da Grid -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Definição das linhas da Grid -->
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <!-- Título -->
+                            <Label 
+                                    Text="Vendas" 
+                                    FontSize="20" 
+                                    FontAttributes="Bold" 
+                                    TextColor="Black" 
+                                    Margin="5,0,0,10"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Start" 
+                                    Grid.Row="0" 
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="3" />
+
+                            <ImageButton 
+                                    Source="imgx.jpg" 
+                                    HeightRequest="20"
+                                    WidthRequest="20"
+                                    Scale="0.6" 
+                                    VerticalOptions="Start"
+                                    HorizontalOptions="End" 
+                                    BackgroundColor="Transparent"
+                                    Clicked="Button_x"
+                                    Grid.Row="0"
+                                    Grid.Column="8"
+                                    Margin="530,0,0,0"/>
+
+                            <!-- Número da Venda e Data/Hora -->
+                            <Label 
+                                    Text="Número da Venda:" 
+                                    FontSize="15" 
+                                    Margin="10,30,0,0" 
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" 
+                                    Grid.Row="1"
+                                    Grid.Column="0" />
+                            <Entry
+                                    x:Name="NumeroVendaEntry"
+                                    IsEnabled="False"
+                                    Placeholder="N°"
+                                    HorizontalOptions="Start" 
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    WidthRequest="120" 
+                                    Margin="150,0,0,0"/>
+
+                            <Label 
+                                    Text="Data:" 
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" 
+                                    Margin="300,30,0,0" 
+                                    Grid.Row="1" 
+                                    Grid.Column="0" />
+                            <Entry 
+                                    x:Name="DataEntry"
+                                    IsEnabled="False"
+                                    Placeholder="Data"
+                                    HorizontalOptions="Start"
+                                    
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    WidthRequest="120" 
+                                    Margin="10,0,0,0"/>
+
+                            <Label 
+                                    Text="Hora:" 
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start"
+                                    Margin="50,30,0,0" 
+                                    Grid.Row="1"
+                                    Grid.Column="2" />
+                            <Entry
+                                    x:Name="HoraEntry"
+                                    IsEnabled="False"
+                                    Placeholder="Hora"
+                                    HorizontalOptions="Start"
+                                    Grid.Row="1"
+                                    Grid.Column="3"
+                                    WidthRequest="120" 
+                                    Margin="95,0,0,0"/>
+
+                            <!-- Vendedor -->
+                            <Label 
+                                    Text="Vendedor:" 
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start"
+                                    Margin="10,0,0,10"
+                                    Grid.Row="3" 
+                                    Grid.Column="0" />
+                            <Entry
+                                    x:Name="VendedorEntry"
+                                    IsEnabled="False"
+                                    Placeholder="Vendedor" 
+                                    HorizontalOptions="Start"
+                                    Grid.Row="3" 
+                                    Grid.Column="0"
+                                    WidthRequest="200" 
+                                    HeightRequest="5"
+                                    Margin="90,0,0,40"/>
+
+                            <!-- Cliente e Botões -->
+                            <Label 
+                                    Text="Cliente:" 
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start"
+                                    Margin="10,120,0,0"
+                                    Grid.Row="4" 
+                                    Grid.Column="0" />
+                            <Entry 
+                                    x:Name="ClienteEntry"
+                                    IsEnabled="False"
+                                    Placeholder="Cliente"
+                                    HorizontalOptions="Start"
+                                    Grid.Row="4" 
+                                    Grid.Column="0"
+                                    WidthRequest="200" 
+                                    HeightRequest="5"
+                                    Margin="90,90,0,0"/>
+
+                            <Label 
+                                    Text="CPF/CNPJ:" 
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start"
+                                    Margin="0,120,0,0"
+                                    Grid.Row="5" 
+                                    Grid.Column="1" />
+                            <Entry 
+                                    x:Name="Vd_cpf_cnpjEntry"
+                                    IsEnabled="False"
+                                    Placeholder="CPF/CNPJ"
+                                    HorizontalOptions="Start"
+                                    Grid.Row="4" 
+                                    Grid.Column="1"
+                                    WidthRequest="200" 
+                                    HeightRequest="5"
+                                    Margin="80,90,0,0"/>
+
+                            <!-- Botões Selecionar Cliente e Produto -->
+                            <Button 
+                                Clicked="Button_Selecionar_Cliente"
+                                    x:Name="Iformacoes_ClienteEntry"
+                                    IsEnabled="True"
+                                    Text="Selecionar Cliente" 
+                                    WidthRequest="160"
+                                    HeightRequest="30" 
+                                    BackgroundColor="#A9A9A9" 
+                                    TextColor="Black"
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    Margin="10,0,0,40"
+                                    HorizontalOptions="Start" />
+
+                            <Button 
+                                    Clicked="Button_Selecionar_Produto"
+                                    x:Name="Selecionar_Produto"
+                                    IsEnabled="True"
+                                    Text="Selecionar Produto" 
+                                    WidthRequest="160"
+                                    HeightRequest="30" 
+                                    BackgroundColor="#A9A9A9" 
+                                    TextColor="Black"
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                Grid.ColumnSpan="3"
+                                    Margin="190,0,0,40"
+                                    HorizontalOptions="Start" />
+                        </Grid>
+
+                        <Grid>
+                            <!-- Definição das colunas da Grid -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Produto -->
+                            <Label 
+                                Text="Produto:"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start" 
+                                WidthRequest="150"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="10,50,0,0"/>
+                            <Entry 
+                                x:Name="ProdutoEntry"
+                                IsEnabled="False"
+                                Placeholder="Produto" 
+                                HorizontalOptions="StartAndExpand" 
+                                WidthRequest="120"
+                                HeightRequest="20"
+                                Grid.Row="0" 
+                                Grid.Column="0"
+                                Margin="100,30,0,0"/>
+
+                            <!-- Quantidade -->
+                            <Label 
+                                Text="Quantidade:" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Start"
+                                WidthRequest="150"
+                                Grid.Row="0" 
+                                Grid.Column="2"
+                                Margin="50,50,0,0"/>
+                            <Entry 
+                                x:Name="QuantidadeEntry"
+                                IsEnabled="False"
+                                Placeholder="Qt" 
+                                HorizontalOptions="StartAndExpand"
+                                WidthRequest="50"
+                                HeightRequest="20"
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Margin="140,30,0,0"
+                                TextChanged="QuantidadeEntry_TextChanged"/>
+
+                            <!-- Preço unitário -->
+                            <Label 
+                                Text="Preço unitário:" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Start" 
+                                WidthRequest="150" 
+                                Grid.Row="0"
+                                Grid.Column="4"
+                                Margin="50,50,0,0"/>
+                            <Entry 
+                                x:Name="Preco_UnitarioEntry"
+                                IsEnabled="False"
+                                Placeholder="PU"
+                                HorizontalOptions="StartAndExpand"
+                                WidthRequest="120"
+                                HeightRequest="20"
+                                Grid.Row="0"
+                                Grid.Column="4"
+                                Margin="154,30,0,0"
+                                TextChanged="Preco_UnitarioEntry_TextChanged"/>
+                        </Grid>
+
+
+                        <Grid>
+                            <!-- Definição das colunas da Grid -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Valor Total -->
+                            <Label
+                                Text="Valor Total:" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Start"
+                                WidthRequest="150" 
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="10,70,0,0"/>
+                            <Entry
+                                x:Name="ValorToTalEntry"
+                                IsEnabled="False"
+                                Placeholder="VT"
+                                HorizontalOptions="StartAndExpand"
+                                WidthRequest="120"
+                                HeightRequest="20"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="90,45,0,0"
+                                TextChanged="ValorToTalEntry_TextChanged"/>
+
+                            <!-- Desconto -->
+                            <Label 
+                                Text="Desconto:" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Start"
+                                WidthRequest="150" 
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Margin="60,70,0,0"/>
+                            <Entry 
+                                x:Name="DescontoEntry"
+                                Placeholder="Desconto"
+                                IsEnabled="False"
+                                HorizontalOptions="StartAndExpand"
+                                WidthRequest="120"
+                                HeightRequest="20"
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Margin="135,45,0,0"
+                                 TextChanged="DescontoEntry_TextChanged"/>
+
+                            <!-- Forma de Pagamento -->
+                            <Picker 
+                                x:Name="paymentMethodPicker"
+                                Title="Forma de Pagamento:"
+                                HorizontalOptions="StartAndExpand"
+                                WidthRequest="170"
+                                HeightRequest="60"
+                                Grid.Row="0"
+                                Grid.Column="4"
+                                Margin="50,30,0,0">
+                                <Picker.Items>
+                                    <x:String>Cartão de Débito</x:String>
+                                    <x:String>Cartão de Crédito</x:String>
+                                    <x:String>Boleto</x:String>
+                                    <x:String>À Vista</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <!-- Parcelas -->
+                            <Picker 
+                                x:Name="parcelasPicker"
+                                Title="Parcelas" 
+                                HorizontalOptions="StartAndExpand"
+                                WidthRequest="170"
+                                HeightRequest="60"
+                                Grid.Row="0" 
+                                Grid.Column="5" 
+                                Margin="50,30,0,0">
+                                <Picker.Items>
+                                    <x:String>1x s/juros</x:String>
+                                    <x:String>2x s/juros</x:String>
+                                    <x:String>3x s/juros</x:String>
+                                    <x:String>4x s/juros</x:String>
+                                    <x:String>5x s/juros</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </Grid>
+
+                        <ScrollView>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <!--Botôes de ação-->
+                            <Button 
+                                Text="Nova venda"
+                                Clicked="Button_Nova_venda"
+                                VerticalOptions="Center"
+                                WidthRequest="110"
+                                HeightRequest="50"
+                                Margin="0,35,280,0"
+                                Grid.Row="0"
+                                Grid.Column="4"
+                                HorizontalOptions="Center"
+                                BackgroundColor="#B0C4DE" />
+
+                            <Button 
+                                Clicked="Button_Clicked_Alterar"
+                                Text="Alterar"
+                                WidthRequest="110"
+                                HeightRequest="50"
+                                Margin="0,5,280,0"
+                                Grid.Row="1"
+                                Grid.Column="4"
+                                HorizontalOptions="Center"
+                                BackgroundColor="#00CED1" />
+
+                            <Button 
+                                Text="Confirmar"
+                                Clicked="Button_Confirmacao"
+                                WidthRequest="110"
+                                HeightRequest="50"
+                                Margin="0,0,280,50"
+                                Grid.Row="2"
+                                Grid.Column="4"
+                                HorizontalOptions="Center"
+                                BackgroundColor="#32CD32" />
+
+                            <Button 
+                                Clicked="Button_Clicked_Cancelar" 
+                                IsEnabled="False"
+                                Text="Cancelar"
+                                WidthRequest="110"
+                                HeightRequest="50"
+                                Margin="0,60,280,0"
+                                Grid.Row="2"
+                                Grid.Column="4"
+                                HorizontalOptions="Center"
+                                BackgroundColor="#FF0000" />
+
+                                <Button 
+                                    Text="Salvar Venda"
+                                    Clicked="Button_Clicked_Salvar_Venda"
+                                    WidthRequest="110"
+                                    HeightRequest="50"
+                                    Margin="0,5,280,67"
+                                    Grid.Row="3"
+                                    Grid.Column="4"
+                                    HorizontalOptions="Center"
+                                    BackgroundColor="#32CD32" />
+
+                                <!--Tela de atualização-->
+
+                           
+
+                            <Frame 
+                                BackgroundColor="LightGray" 
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                CornerRadius="0" 
+                                Padding="10"
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Margin="30,39,0,0">
+                                <Label 
+                                    Text="PRODUTO:" 
+                                    FontSize="15" 
+                                    HorizontalOptions="Start" 
+                                    VerticalOptions="Center" />
+                            </Frame>
+
+                            <Frame 
+                                BackgroundColor="LightGray" 
+                                WidthRequest="120"
+                                HeightRequest="45"
+                                CornerRadius="0" 
+                                Padding="10"
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Margin="0,39,404,0">
+                                <Label 
+                                    Text="QUANTIDADE:" 
+                                    FontSize="15" 
+                                    HorizontalOptions="Start" 
+                                    VerticalOptions="Center" />
+                            </Frame>
+
+                            <Frame 
+                                BackgroundColor="LightGray" 
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                CornerRadius="0" 
+                                Padding="10"
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Margin="0,39,184,0">
+                                <Label 
+                                    Text="PREÇO UN:" 
+                                    FontSize="15" 
+                                    HorizontalOptions="Start" 
+                                    VerticalOptions="Center" />
+                            </Frame>
+
+                            <Frame 
+                                BackgroundColor="LightGray" 
+                                WidthRequest="105"
+                                HeightRequest="45"
+                                CornerRadius="0" 
+                                Padding="10"
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Margin="21,39,0,0">
+                                <Label 
+                                    Text="DESCONTO:" 
+                                    FontSize="15" 
+                                    HorizontalOptions="Start" 
+                                    VerticalOptions="Center" />
+                            </Frame>
+
+                            <Frame 
+                                BackgroundColor="LightGray" 
+                                WidthRequest="124"
+                                HeightRequest="45"
+                                CornerRadius="0" 
+                                Padding="10"
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Margin="250,39,0,0">
+                                <Label 
+                                    Text="VALOR TOTAL:" 
+                                     FontSize="15" 
+                                    HorizontalOptions="Start" 
+                                VerticalOptions="Center" />
+                            </Frame>
+
+                            
+
+                            <!-- Adicione o StackLayout para a lista de produtos -->
+                                <StackLayout
+                                    x:Name="ProductStackLayout"
+                                    Orientation="Vertical"
+                                    WidthRequest="100"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="4"
+                                    Grid.RowSpan="6"
+                                    HorizontalOptions="Start"
+                                    Margin="30,0,0,0">
+
+                                    
+
+                                </StackLayout>
+
+                            <StackLayout
+                                    x:Name="LinhaQuantidade"
+                                    Orientation="Vertical"
+                                    WidthRequest="120"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="6"
+                                    Grid.RowSpan="6"
+                                    HorizontalOptions="Start"
+                                    Margin="130,0,0,0">
+                            </StackLayout>
+
+                            <StackLayout
+                                    x:Name="LinhaPrecoUn"
+                                    Orientation="Vertical"
+                                    WidthRequest="100"
+                                    Grid.Row="1"
+                                    Grid.Column="3"
+                                    Grid.ColumnSpan="4"
+                                    Grid.RowSpan="6"
+                                    HorizontalOptions="Start"
+                                    Margin="120,0,0,0">
+                            </StackLayout>
+
+                            <StackLayout
+                                    x:Name="LinhaDesconto"
+                                    Orientation="Vertical"
+                                    WidthRequest="105"
+                                    Grid.Row="1"
+                                    Grid.Column="3" 
+                                    Grid.ColumnSpan="4"
+                                    Grid.RowSpan="6"
+                                    HorizontalOptions="Start"
+                                    Margin="220,0,0,0">
+                            </StackLayout>
+
+                            <StackLayout
+                                    x:Name="LinhaValorTotal"
+                                    Orientation="Vertical"
+                                    WidthRequest="124"
+                                    Grid.Row="1"
+                                    Grid.Column="3"
+                                    Grid.ColumnSpan="4"
+                                    Grid.RowSpan="6"
+                                    HorizontalOptions="Start"
+                                    Margin="325,0,0,0">
+                            </StackLayout>
+
+                           
+
+                        </Grid>
+                        </ScrollView>
+
+                       
+
+                    </StackLayout>
+
+                </ScrollView>
+
+            </ContentView>
+
+            <ContentView
+                    x:Name="Paginademovimentacoes"
+                    BackgroundColor="#F8F8FF"
+                    Margin="25,0,0,0"
+                    IsVisible="False"
+                    AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize"
+                    AbsoluteLayout.LayoutFlags="None">
+
+                <ScrollView>
+                    <StackLayout>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <!-- Espaço flexível para a label -->
+                                <ColumnDefinition Width="Auto" />
+                                <!-- Espaço ajustado para o botão -->
+                            </Grid.ColumnDefinitions>
+
+                            <Label 
+                                Text="Movimentações" 
+                                FontSize="20" 
+                                FontAttributes="Bold" 
+                                TextColor="Black" 
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Start" 
+                                Grid.Row="0" 
+                                Grid.Column="0"/>
+
+                            <ImageButton 
+                                Source="imgx.jpg" 
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                Scale="0.6" 
+                                VerticalOptions="Center"
+                                HorizontalOptions="End" 
+                                BackgroundColor="Transparent"
+                                Clicked="Button_x"
+                                Grid.Row="0"
+                                Grid.Column="1"/>
+                            <!-- Botão no final da coluna direita -->
+
+                        </Grid>
+
+
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+
+                            <Button
+                                Clicked="Button_Vendas"
+                                Text="Consultar Vendas"
+                                Margin="50,20,0,0"
+                                FontSize="Body"
+                                TextColor="Black"
+                                WidthRequest="190"
+                                BackgroundColor="LightGrey"
+                                Grid.Row="0"/>
+
+
+                            <Button
+                                Clicked="Button_Produtos_Cadastrados"
+                                Text="Consultar Produtos"
+                                Margin="50,10,0,0"
+                                FontSize="Body"
+                                TextColor="Black"
+                                WidthRequest="190"
+                                BackgroundColor="LightGrey"
+                                Grid.Row="1"/>
+
+
+
+                            <Button
+                                Clicked="Button_Insumos_Cadastrados"
+                                Text="Consultar Insumos"
+                                Margin="50,10,0,0"
+                                FontSize="Body"
+                                TextColor="Black"
+                                WidthRequest="190"
+                                BackgroundColor="LightGrey"
+                                Grid.Row="2"/>
+
+
+                            <Button
+                                Clicked="Button_Clientes_Cadastrados"
+                                Text="Consultar Clientes"
+                                Margin="50,10,0,0"
+                                FontSize="Body"
+                                TextColor="Black"
+                                WidthRequest="190"
+                                BackgroundColor="LightGrey"
+                                Grid.Row="4"/>
+                            
+                            
+
+                            <Button
+                                Clicked="Button_Usuarios_Cadastrados"
+                                Text="Consultar Funcionários"
+                                Margin="50,10,0,0"
+                                FontSize="Body"
+                                TextColor="Black"
+                                WidthRequest="190"
+                                BackgroundColor="LightGrey"
+                                Grid.Row="3"/>
+
+                        </Grid>
+
+
+
+                    </StackLayout>
+
+                </ScrollView>
+
+
+            </ContentView>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

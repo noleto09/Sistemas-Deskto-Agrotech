@@ -1,0 +1,102 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Agrotech
+build_property.ProjectDir = C:\Users\nolet\Documents\Teste sistema Desktop movimentações\AppDesktop\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Clientes Cadastrados/ClientesCadastrados.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Clientes_Cadastrados.ClientesCadastrados.xaml
+build_metadata.AdditionalFiles.TargetPath = Clientes Cadastrados\ClientesCadastrados.xaml
+build_metadata.AdditionalFiles.RelativePath = Clientes Cadastrados\ClientesCadastrados.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Insumos cadastrados/InsumosCadastrados.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Insumos_cadastrados.InsumosCadastrados.xaml
+build_metadata.AdditionalFiles.TargetPath = Insumos cadastrados\InsumosCadastrados.xaml
+build_metadata.AdditionalFiles.RelativePath = Insumos cadastrados\InsumosCadastrados.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Paginas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Paginas.xaml
+build_metadata.AdditionalFiles.TargetPath = Paginas.xaml
+build_metadata.AdditionalFiles.RelativePath = Paginas.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Produtos cadastrados/ProdutoselotesCadastrados.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Produtos_cadastrados.ProdutoselotesCadastrados.xaml
+build_metadata.AdditionalFiles.TargetPath = Produtos cadastrados\ProdutoselotesCadastrados.xaml
+build_metadata.AdditionalFiles.RelativePath = Produtos cadastrados\ProdutoselotesCadastrados.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Selecao de cliente/ConsultarCliente.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Selecao_de_cliente.ConsultarCliente.xaml
+build_metadata.AdditionalFiles.TargetPath = Selecao de cliente\ConsultarCliente.xaml
+build_metadata.AdditionalFiles.RelativePath = Selecao de cliente\ConsultarCliente.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Selecao de insumo/SelecionarInsumo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Selecao_de_insumo.SelecionarInsumo.xaml
+build_metadata.AdditionalFiles.TargetPath = Selecao de insumo\SelecionarInsumo.xaml
+build_metadata.AdditionalFiles.RelativePath = Selecao de insumo\SelecionarInsumo.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Selecao de produto/ConsultarProduto.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Selecao_de_produto.ConsultarProduto.xaml
+build_metadata.AdditionalFiles.TargetPath = Selecao de produto\ConsultarProduto.xaml
+build_metadata.AdditionalFiles.RelativePath = Selecao de produto\ConsultarProduto.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Usuarios cadastrados/UsuariosCadastrados.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Usuarios_cadastrados.UsuariosCadastrados.xaml
+build_metadata.AdditionalFiles.TargetPath = Usuarios cadastrados\UsuariosCadastrados.xaml
+build_metadata.AdditionalFiles.RelativePath = Usuarios cadastrados\UsuariosCadastrados.xaml
+
+[C:/Users/nolet/Documents/Teste sistema Desktop movimentações/AppDesktop/Vendas realizadas/VendasRealizadas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Agrotech.Vendas_realizadas.VendasRealizadas.xaml
+build_metadata.AdditionalFiles.TargetPath = Vendas realizadas\VendasRealizadas.xaml
+build_metadata.AdditionalFiles.RelativePath = Vendas realizadas\VendasRealizadas.xaml

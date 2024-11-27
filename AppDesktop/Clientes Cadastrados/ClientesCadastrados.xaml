@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Agrotech.Clientes_Cadastrados.ClientesCadastrados"
+             Title="ClientesCadastrados">
+
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+
+                <!-- Definição das colunas da Grid -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Definição das linhas da Grid -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label 
+                    Text="CPF/CNPJ:" 
+                    FontSize="15" 
+                    Margin="20,30,0,0" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    Grid.Row="1"
+                    Grid.Column="0" />
+                <Entry
+                    x:Name="Pesquisapelocpfcnpj"
+                    IsEnabled="True"
+                    Placeholder="Número do Lote"
+                    HorizontalOptions="Start" 
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    WidthRequest="120" 
+                    Margin="100,0,0,0"/>
+
+                <ImageButton 
+                    Source="img_lupa.png" 
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Scale="0.6" 
+                    HorizontalOptions="Start"
+                    BackgroundColor="Black"
+                    Grid.Row="1"
+                    Grid.RowSpan="3"
+                    Grid.Column="0"
+                    Margin="210,20,0,0"
+                    Clicked="Button_Pesquisacpfcnpj"/>
+
+                <Label 
+                    Text="Nome cliente:" 
+                    FontSize="15" 
+                    Margin="250,30,0,0" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    Grid.Row="1"
+                    Grid.Column="0" />
+                <Entry
+                    x:Name="PesquisaPeloNomeclinte"
+                    IsEnabled="True"
+                    Placeholder="Data Inicial"
+                    HorizontalOptions="Start" 
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    WidthRequest="130" 
+                    Margin="10,0,0,0"/>
+
+                <ImageButton 
+                    Source="img_lupa.png" 
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Scale="0.6" 
+                    HorizontalOptions="Start"
+                    BackgroundColor="Black"
+                    Grid.Row="1"
+                    Grid.RowSpan="3"
+                    Grid.Column="1"
+                    Margin="130,20,0,0"
+                    Clicked="Button_Buscapelonomecliente"/>
+
+
+                <Label 
+                    Text="Tipo Cliente:" 
+                    FontSize="15" 
+                    Margin="170,30,0,0" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    Grid.Row="1"
+                    Grid.Column="1" />
+                <Entry
+                    x:Name="PesquisaPeloTipoCliente"
+                    IsEnabled="True"
+                    Placeholder="Data Final"
+                    HorizontalOptions="Start" 
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    WidthRequest="130" 
+                    Margin="5,0,0,0"/>
+
+                <ImageButton 
+                    Source="img_lupa.png" 
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Scale="0.6" 
+                    HorizontalOptions="Start"
+                    BackgroundColor="Black"
+                    Grid.Row="1"
+                    Grid.RowSpan="3"
+                    Grid.Column="2"
+                    Margin="120,20,0,0"
+                    Clicked="Button_Buscarpelotipocliente"/>
+
+               
+            </Grid>
+
+            <CollectionView x:Name="ClientesCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="10" BorderColor="LightGray" CornerRadius="8">
+                            <StackLayout Spacing="5">
+
+                                <!-- ID do Cliente -->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="ID do Cliente: " FontAttributes="Bold" />
+                                    <Label Text="{Binding id_cliente}" />
+                                </StackLayout>
+
+                                <!-- Tipo de Cliente (PF ou PJ) -->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Tipo de Cliente: " FontAttributes="Bold" />
+                                    <Label Text="{Binding tipo_cliente}" />
+                                </StackLayout>
+
+                                <!-- Nome do Cliente -->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Nome do Cliente: " FontAttributes="Bold" />
+                                    <Label Text="{Binding nome_cliente}" />
+                                </StackLayout>
+
+                                <!-- Endereço -->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Rua: " FontAttributes="Bold" />
+                                    <Label Text="{Binding rua}" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Número: " FontAttributes="Bold" />
+                                    <Label Text="{Binding numero}" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Complemento: " FontAttributes="Bold" />
+                                    <Label Text="{Binding complemento}" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="CEP: " FontAttributes="Bold" />
+                                    <Label Text="{Binding CEP}" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Bairro: " FontAttributes="Bold" />
+                                    <Label Text="{Binding bairro}" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Estado: " FontAttributes="Bold" />
+                                    <Label Text="{Binding estado}" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Cidade: " FontAttributes="Bold" />
+                                    <Label Text="{Binding cidade}" />
+                                </StackLayout>
+
+                                <!-- Informações específicas de PF -->
+                                <StackLayout IsVisible="{Binding tipo_cliente, Converter={StaticResource PFTypeConverter}}">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="CPF: " FontAttributes="Bold" />
+                                        <Label Text="{Binding cpf}" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="RG: " FontAttributes="Bold" />
+                                        <Label Text="{Binding rg_cliente}" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Data de Nascimento: " FontAttributes="Bold" />
+                                        <Label Text="{Binding data_nascimento}" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Gênero: " FontAttributes="Bold" />
+                                        <Label Text="{Binding genero_cliente}" />
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <!-- Informações específicas de PJ -->
+                                <StackLayout IsVisible="{Binding tipo_cliente, Converter={StaticResource PJTypeConverter}}">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="CNPJ: " FontAttributes="Bold" />
+                                        <Label Text="{Binding cnpj}" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Razão Social: " FontAttributes="Bold" />
+                                        <Label Text="{Binding razao_social}" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Nome do Responsável: " FontAttributes="Bold" />
+                                        <Label Text="{Binding nome_responsavel}" />
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <!-- Número de Cadastro do Cliente -->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Número de Cadastro: " FontAttributes="Bold" />
+                                    <Label Text="{Binding nm_cadastro_cliente}" />
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

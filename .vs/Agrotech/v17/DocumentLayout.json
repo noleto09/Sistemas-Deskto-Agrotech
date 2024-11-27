@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nolet\\Documents\\Teste sistema Desktop movimenta\u00E7\u00F5es\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30BD36A0-0D4B-43D7-87E5-37458E51BC4C}|AppDesktop\\Agrotech.csproj|c:\\users\\nolet\\documents\\teste sistema desktop movimenta\u00E7\u00F5es\\appdesktop\\paginas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30BD36A0-0D4B-43D7-87E5-37458E51BC4C}|AppDesktop\\Agrotech.csproj|solutionrelative:appdesktop\\paginas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30BD36A0-0D4B-43D7-87E5-37458E51BC4C}|AppDesktop\\Agrotech.csproj|c:\\users\\nolet\\documents\\teste sistema desktop movimenta\u00E7\u00F5es\\appdesktop\\paginas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{30BD36A0-0D4B-43D7-87E5-37458E51BC4C}|AppDesktop\\Agrotech.csproj|solutionrelative:appdesktop\\paginas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30BD36A0-0D4B-43D7-87E5-37458E51BC4C}|AppDesktop\\Agrotech.csproj|c:\\users\\nolet\\documents\\teste sistema desktop movimenta\u00E7\u00F5es\\appdesktop\\banco de dados\\lgnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30BD36A0-0D4B-43D7-87E5-37458E51BC4C}|AppDesktop\\Agrotech.csproj|solutionrelative:appdesktop\\banco de dados\\lgnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LgNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\nolet\\Documents\\Teste sistema Desktop movimenta\u00E7\u00F5es\\AppDesktop\\Banco de dados\\LgNegocio.cs",
+              "RelativeDocumentMoniker": "AppDesktop\\Banco de dados\\LgNegocio.cs",
+              "ToolTip": "C:\\Users\\nolet\\Documents\\Teste sistema Desktop movimenta\u00E7\u00F5es\\AppDesktop\\Banco de dados\\LgNegocio.cs",
+              "RelativeToolTip": "AppDesktop\\Banco de dados\\LgNegocio.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T01:24:10.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Paginas.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nolet\\Documents\\Teste sistema Desktop movimenta\u00E7\u00F5es\\AppDesktop\\Paginas.xaml.cs",
+              "RelativeDocumentMoniker": "AppDesktop\\Paginas.xaml.cs",
+              "ToolTip": "C:\\Users\\nolet\\Documents\\Teste sistema Desktop movimenta\u00E7\u00F5es\\AppDesktop\\Paginas.xaml.cs",
+              "RelativeToolTip": "AppDesktop\\Paginas.xaml.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAUwPcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T01:22:09.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Paginas.xaml",
+              "DocumentMoniker": "C:\\Users\\nolet\\Documents\\Teste sistema Desktop movimenta\u00E7\u00F5es\\AppDesktop\\Paginas.xaml",
+              "RelativeDocumentMoniker": "AppDesktop\\Paginas.xaml",
+              "ToolTip": "C:\\Users\\nolet\\Documents\\Teste sistema Desktop movimenta\u00E7\u00F5es\\AppDesktop\\Paginas.xaml",
+              "RelativeToolTip": "AppDesktop\\Paginas.xaml",
+              "ViewState": "AgIAACcBAAAAAAAAAAAgwDABAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T01:22:04.52Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
